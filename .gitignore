@@ -1,1 +1,3 @@
 localtesting/*
+build/
+node_modules/
