@@ -1,4 +1,4 @@
-# Mervelous Markdown Editor
+# Marvelous Markdown Editor
 This is based on SimpleMDE by nextwebs
 
 # SimpleMDE - Markdown Editor
