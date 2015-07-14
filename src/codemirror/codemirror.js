@@ -1163,7 +1163,7 @@
   function disableBrowserMagic(field) {
 	field.setAttribute("autocorrect", "off");
 	field.setAttribute("autocapitalize", "off");
-	field.setAttribute("spellcheck", "false");
+	field.setAttribute("spellcheck", "true");
   }
 
   // TEXTAREA INPUT STYLE

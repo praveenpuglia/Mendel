@@ -431,7 +431,7 @@ var toolbar = [{
 		name: 'preview',
 		action: togglePreview,
 		className: "fa fa-eye"
-	},
+	}
 ];
 
 /**
@@ -515,7 +515,16 @@ SimpleMDE.prototype.render = function(el) {
 		lineNumbers: false,
 		autofocus: (options.autofocus === true) ? true : false,
 		extraKeys: keyMaps,
-		lineWrapping: (options.lineWrapping === false) ? false : true
+		lineWrapping: (options.lineWrapping === false) ? false : true,
+		scrollbarStyle: "overlay",
+		extraKeys: {
+	        "F11": function(cm) {
+	          cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+	        },
+	        "Esc": function(cm) {
+	          if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+	        }
+	      }
 	});
 
 	if (options.toolbar !== false) {
@@ -750,5 +759,5 @@ SimpleMDE.prototype.togglePreview = function() {
 	togglePreview(this);
 };
 SimpleMDE.prototype.toggleFullScreen = function() {
-	toggleFullScreen(this);
+	this.codemirror.setOption("fullScreen", !cm.getOption("fullScreen"));
 };

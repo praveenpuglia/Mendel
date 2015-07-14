@@ -1,19 +1,19 @@
 {
-  "name": "simplemde-markdown-editor",
-  "version": "0.0.0",
-  "description": "SimpleMDE Markdown Editor",
+  "name": "Mendelium Editor",
+  "version": "0.0.1",
+  "description": "Fork of SimpleMDE Markdown Editor",
   "main": "simplemde.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hashd/simplemde-markdown-editor.git"
+    "url": "https://github.com/hashd/Mendel.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hashd/simplemde-markdown-editor/issues"
+    "url": "https://github.com/hashd/Mendel/issues"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

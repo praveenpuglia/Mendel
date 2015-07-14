@@ -4,8 +4,8 @@ var gulp = require('gulp'),
 	minify = require('gulp-minify-css');
 
 var paths = {
-	"js-sources": ['src/codemirror/codemirror.js','src/codemirror/continuelist.js','src/codemirror/markdown.js','src/codemirror/xml.js','src/marked.js','src/simplemde.js'],
-	"css-sources": ['src/theme.css'],
+	"js-sources": ['src/codemirror/codemirror.js','src/codemirror/continuelist.js','src/codemirror/markdown.js','src/codemirror/xml.js','src/codemirror/cm-addons/**/*.js', 'src/marked.js','src/simplemde.js'],
+	"css-sources": ['src/theme.css', 'src/codemirror/**/*.css'],
 	"build-path": 'build/',
 	"build-assets": 'build/**/*',
 	"dist-path": 'dist/'
@@ -13,19 +13,19 @@ var paths = {
 
 gulp.task('js', function () {
 	return gulp.src(paths['js-sources'])
-		.pipe(concat('marvelous.me.js'))
+		.pipe(concat('mendel.js'))
 		.pipe(gulp.dest(paths['build-path']))
 		.pipe(uglify())
-		.pipe(concat('marvelous.me.min.js'))
+		.pipe(concat('mendel.min.js'))
 		.pipe(gulp.dest(paths['build-path']));
 });
 
 gulp.task('css', function () {
 	return gulp.src(paths['css-sources'])
-		.pipe(concat('marvelous.me.css'))
+		.pipe(concat('mendel.css'))
 		.pipe(gulp.dest(paths['build-path']))
 		.pipe(minify())
-		.pipe(concat('marvelous.me.min.css'))
+		.pipe(concat('mendel.min.css'))
 		.pipe(gulp.dest(paths['build-path']));
 });
 
