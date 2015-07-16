@@ -1,5 +1,5 @@
 {
-  "name": "Mendelium Editor",
+  "name": "Mendelium-Editor",
   "version": "0.0.1",
   "description": "Fork of SimpleMDE Markdown Editor",
   "main": "simplemde.min.js",
